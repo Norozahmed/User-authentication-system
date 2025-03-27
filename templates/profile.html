@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="profile-container" style="background-color: #e9e9e9; padding: 20px; border-radius: 8px;">
+    <div class="profile-header">
+        {% if user.profile_pic %}
+        <img src="{{ url_for('static', filename='uploads/' + user.profile_pic) }}" 
+             alt="Profile Picture" class="profile-pic">
+        {% else %}
+        <div class="profile-pic-default"></div>
+        {% endif %}
+        <h1>{{ user.full_name or user.username }}</h1>
+        <p class="username">@{{ user.username }}</p>
+    </div>
+
+    <div class="profile-details">
+        <div class="detail-section">
+            <h3>About Me</h3>
+            <p>{{ user.bio or "No bio yet" }}</p>
+        </div>
+
+        <div class="detail-section">
+            <h3>Skills</h3>
+            <div class="skills">
+                {% if user.skills %}
+                    {% for skill in user.skills.split(',') %}
+                    <span class="skill-tag">{{ skill.strip() }}</span>
+                    {% endfor %}
+                {% else %}
+                    <p>No skills added yet</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="profile-actions">
+        <a href="{{ url_for('update_profile') }}" class="btn btn-primary">Edit Profile</a>
+        <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">Back to Dashboard</a>
+    </div>
+</div>
+{% endblock %}   
