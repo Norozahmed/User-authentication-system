@@ -6,10 +6,10 @@ This project is a comprehensive User Authentication System developed using HTML,
 
 - [Features](#features)
 - [Technologies Used](#technologies-used)
+- [Database](#database)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -24,6 +24,10 @@ This project is a comprehensive User Authentication System developed using HTML,
 - **CSS**: Adds styling to the web pages.
 - **JavaScript**: Implements frontend functionality and form validation.
 - **Python**: Handles backend logic and server-side processing.
+
+## Database
+
+The project includes a database component to store user information securely. The database schema and related files are located in the `Database` directory. Ensure to set up the database as per the instructions provided in the `Database` directory before running the application.
 
 ## Installation
 
@@ -59,6 +63,9 @@ To set up the project locally, follow these steps:
     pip install -r requirements.txt
     ```
 
+6. Set up the database:
+    - Follow the instructions provided in the `Database` directory to set up the database.
+
 ## Usage
 
 1. Start the application:
@@ -71,7 +78,3 @@ To set up the project locally, follow these steps:
 ## Contributing
 
 We welcome contributions! Please open an issue to discuss any changes or improvements you would like to make.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
