@@ -14,7 +14,8 @@ This project is a comprehensive User Authentication System developed using HTML,
 
 - ## Demo
 
-![User-authentication-system Screenshot](static/images/user_register.png)
+| ![User Registration](static/images/user_register.png) | ![User Login](static/images/user_register2.png) | ![Dashboard](static/images/user_register3.png) |
+|:---:|:---:|:---:|
 
 ## Features
 
